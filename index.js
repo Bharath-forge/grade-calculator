@@ -14,6 +14,18 @@ const gradeC = 70;        // grade C starts at 70
 const gradeD = 60;        // grade D starts at 60
 const gradeF = 0;         // grade F means student has scored below 60 
 
-console.log(total);
-console.log(average);
-console.log(finalScore);
+let letterGrade = null; // to assing the grade after the calculations
+
+if(finalScore >= gradeA) {  // If the total >= 90
+    letterGrade = "A";
+} else if (finalScore >= gradeB) { // If the total >= 80
+    letterGrade = "B";
+} else if (finalScore >= gradeC) {  // If the total >= 70
+    letterGrade = "C";
+} else if (finalScore >= gradeD) {  // If the total >= 60
+    letterGrade = "D";
+} else {                            // If the total < 60
+    letterGrade = "F";  
+} 
+    
+console.log(`Grade = ${letterGrade}`) // final grade of the student
